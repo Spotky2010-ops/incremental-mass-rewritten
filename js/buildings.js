@@ -4,7 +4,7 @@ const BUILDINGS_DATA = {
     mass_1: {
         name: "Muscler",
 		icon: "mass_upg1",
-        scale: "massUpg",
+        scale: "mass_Upg2",
 
         get isUnlocked() { return player.ranks.rank.gte(1) || player.mainUpg.atom.includes(1) },
         get autoUnlocked() { return hasUpgrade('rp',3) },
@@ -112,7 +112,7 @@ const BUILDINGS_DATA = {
             if (player.mainUpg.bh.includes(9)) ss = ss.add(tmp.upgs.main?tmp.upgs.main[2][9].effect:E(0))
             let step = E(1)
             if (player.ranks.tetr.gte(2)) step = step.add(RANKS.effect.tetr[2]())
-            if (player.mainUpg.rp.includes(9)) step = step.add(0.25)
+            if (player.mainUpg.rp.includes(9)) step = step.add(0.5)
             if (player.mainUpg.rp.includes(12)) step = step.add(tmp.upgs.main?tmp.upgs.main[1][12].effect:E(0))
             if (hasElement(4)) step = step.mul(tmp.elements.effect[4])
             if (player.md.upgs[3].gte(1)) step = step.mul(tmp.md.upgs[3].eff)
