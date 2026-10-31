@@ -57,6 +57,13 @@
 }
 
 @font-face {
+	font-family: '@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/ms_sans_serif.woff');
+	size-adjust: 110%;
+} 
+
+@font-face {
 	font-family: 'Noto Sans JP';
 	src: url('fonts/NotoSansJP.ttf');
 }
