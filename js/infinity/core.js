@@ -14,7 +14,7 @@ const CORE = {
         boost() {return player.mass.add(1).log10().add(1).log10().add(1).log10().add(1)},
         eff: [
             s => {
-                let x = s.add(1).pow(s.root(2)).overflow(100,0.5)
+                let x = s.add(1).pow(s.root(2)).overflow(100,0.75)
 
                 if (tmp.NHDimprove) x = x.pow(10)
 
@@ -99,7 +99,7 @@ const CORE = {
             s => {
                 let x = s.add(1).pow(s.root(2))
                 
-                x = overflow(x,100,0.5)
+                x = overflow(x,100,0.75)
 
                 if (tmp.c16active) x = x.log10().add(1)
 
@@ -110,7 +110,7 @@ const CORE = {
             s => {
                 let x = s.add(1).pow(s.root(2).mul(2))
 
-                x = overflow(x,100,0.5)
+                x = overflow(x,100,0.75)
 
                 if (tmp.c16active) x = x.log10().add(1)
 
